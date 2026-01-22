@@ -1,4 +1,14 @@
-Student Management System (SMS)
+Name:Adeniji Ademide Enoch
+Matric no : 24/14961 
+Department :Computer science 
+course code : SEN 201 
+
+
+
+
+
+Student Management System 
+(SMS)
 	1.	Planning
 	•	Goal: Build a system to manage student records efficiently.
 	•	Tools: Python, Flask, SQLite, HTML/CSS.
