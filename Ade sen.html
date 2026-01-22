@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+</head>
+<body>
+<h2>Student List</h2>
+<form action="/add" method="post">
+    Name: <input type="text" name="name">
+    Age: <input type="number" name="age">
+    Class: <input type="text" name="class">
+    <button type="submit">Add Student</button>
+</form>
+<table border="1">
+<tr><th>ID</th><th>Name</th><th>Age</th><th>Class</th><th>Actions</th></tr>
+{% for student in students %}
+<tr>
+    <td>{{student[0]}}</td>
+    <td>{{student[1]}}</td>
+    <td>{{student[2]}}</td>
+    <td>{{student[3]}}</td>
+    <td>
+        <form action="/update/{{student[0]}}" method="post" style="display:inline;">
+            <input type="text" name="name" placeholder="New Name">
+            <input type="number" name="age" placeholder="New Age">
+            <input type="text" name="class" placeholder="New Class">
+            <button type="submit">Update</button>
+        </form>
+        <a href="/delete/{{student[0]}}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
